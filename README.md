@@ -1,4 +1,4 @@
-Google File System
+Simulation of Google File System
 
 This project aims to establish communication between multiple devices acting as master, slave, and client.
 

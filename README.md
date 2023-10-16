@@ -10,10 +10,11 @@ The client device connects to the master and receives a map containing the occur
 
 In simpler terms, the project works as follows:
 
-The master device sends a request to the slave devices to calculate the frequency of each character in their local text files and create a map accordingly.
-The slave devices calculate the frequency of each character and create a map. They then send this map to the master device.
-The master device collects maps from all slave devices and stores them in a database.
-The master device performs a mapreduce operation to determine the occurrence of each character across all maps.
-The master device stores the resulting information in a new map and sends it to the client device.
-The client device connects to the master and receives the map containing the occurrence numbers of characters.
+1-The master device sends a request to the slave devices to calculate the frequency of each character in their local text files and create a map accordingly.
+2-The slave devices calculate the frequency of each character and create a map. They then send this map to the master device.
+3-The master device collects maps from all slave devices and stores them in a database.
+3-The master device performs a mapreduce operation to determine the occurrence of each character across all maps.
+4-The master device stores the resulting information in a new map and sends it to the client device.
+5-The client device connects to the master and receives the map containing the occurrence numbers of characters.
+
 This project demonstrates the power of distributed computing and how it can be used to solve complex problems.

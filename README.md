@@ -1,19 +1,19 @@
-# Master Slave Database Architecture
+Google File System
 
-The objective of this project is to establish communication among multiple devices functioning as master, slave, and client.
+This project aims to establish communication between multiple devices acting as master, slave, and client.
 
-Tools: Visual Studio Code, MySQL Workbench.
+Each slave device has a local text file. The code opens the file to calculate the frequency of each character and creates a map accordingly. This map is then sent to the master device.
 
-Languages: go.
-
-The code assumes that each slave device possesses a local text file.
-It opens the file to calculate the frequency of each character and creates a map accordingly.
-This map is then sent to the master device.
-
-The master device collects maps from all slaves and stores them in a database. 
-It performs a mapreduce operation to determine the occurrence of each character across all maps.
-The resulting information is stored in a new map, which is sent to the client device.
+The master device collects maps from all slaves and stores them in a database. It performs a mapreduce operation to determine the occurrence of each character across all maps. The resulting information is stored in a new map, which is sent to the client device.
 
 The client device connects to the master and receives a map containing the occurrence numbers of characters.
 
-To execute this project successfully, it is necessary to disable the Windows Firewall and configure the IP addresses of the devices.
+In simpler terms, the project works as follows:
+
+The master device sends a request to the slave devices to calculate the frequency of each character in their local text files and create a map accordingly.
+The slave devices calculate the frequency of each character and create a map. They then send this map to the master device.
+The master device collects maps from all slave devices and stores them in a database.
+The master device performs a mapreduce operation to determine the occurrence of each character across all maps.
+The master device stores the resulting information in a new map and sends it to the client device.
+The client device connects to the master and receives the map containing the occurrence numbers of characters.
+This project demonstrates the power of distributed computing and how it can be used to solve complex problems.
